@@ -1,0 +1,363 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Starter Template - Materialize</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="./static/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="./static/css2/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+
+<body>
+  <nav class="light-blue lighten-1" style="background:gray" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Breast Cancer Detector</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="{{url_for('logout')}}">logout</a></li>
+      </ul>
+
+      <ul id="nav-mobile" class="sidenav">
+        <li><a href="{{url_for('logout')}}">logout</a></li>
+      </ul>
+      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+
+
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+      <br><br>
+      <h1 class="header center orange-text">Breast Cancer Detector</h1>
+      <div class="row center">
+        <h5 class="header col s12 light">Predict the probability of breast cancer occurence
+        <br>
+        </h5>
+      </div>
+      
+
+              <div class="row">
+
+
+                <form action="/uploadd" method="POST">
+                  <div class="row center">
+              
+                      <button type="submit" class="btn-large waves-effect waves-light orange">Upload from Dataset</button>
+                  </div>
+              </form>
+    <form action='/predictFromDB' method="POST" class="col s12">
+      <div class="row">
+   
+
+   
+ 
+{% if v != NULL %}      
+
+
+{% for data in v %}
+
+
+
+
+
+<div class="input-field col s4">
+
+    <label for="Oxy3"><b>radius_mean </b></label>
+      <br>
+    <input id="Oxy3"  name="77" type="text" class="validate" value="{{data[0]}}">
+
+  </div>
+
+  <div class="input-field col s4">
+      <label for="hum"><b>texture_mean</b></label>
+      <br>
+    <input id="hum" name="3" type="text" class="validate" value="{{data[1]}}">
+
+  </div>
+
+
+
+
+  <div class="input-field col s4">
+      <label for="temp2"><b>perimeter_mean</b></label>
+      <br>
+    <input   id="temp2" name='4'type="text" class="validate" value="{{data[2]}}">
+  </div>
+  <div class="input-field col s4">
+
+    <label for="Oxy2"><b>area_mean </b></label>
+      <br>
+    <input id="Oxy2"  name="5" type="text" class="validate" value="{{data[3]}}">
+
+  </div>
+
+  <div class="input-field col s4">
+      <label for="hum2"><b>smoothness_mean</b></label>
+      <br>
+    <input id="hum2" name="6" type="text" class="validate" value="{{data[4]}}">
+
+  </div>
+
+
+
+
+
+  <div class="input-field col s4">
+      <label for="temp3"><b>compactness_mean</b></label>
+      <br>
+    <input   id="temp3" name='7'type="text" class="validate" value="{{data[5]}}">
+  </div>
+  <div class="input-field col s4">
+
+    <label for="Oxy3"><b>concavepoints_mean </b></label>
+      <br>
+    <input id="Oxy3"  name="8" type="text" class="validate" value="{{data[6]}}">
+
+  </div>
+
+
+
+
+
+
+<div class="input-field col s4">
+      <label for="Temp"><b>concavity_mean</b></label>
+      <br>
+    <input   id="Temp" name='99'type="text" class="validate" value="{{data[7]}}">
+  </div>
+  <div class="input-field col s4">
+
+    <label for="Oxy"><b>symmetry_mean </b></label>
+      <br>
+    <input id="Oxy"  name="9" type="text" class="validate" value="{{data[8]}}">
+
+  </div>
+
+  <div class="input-field col s4">
+      <label for="hum"><b>fractal_dimension_mean</b></label>
+      <br>
+    <input id="hum" name="10" type="text" class="validate" value="{{data[9]}}"> 
+
+  </div>
+
+
+
+
+  <div class="input-field col s4">
+      <label for="temp2"><b>radius_se</b></label>
+      <br>
+    <input   id="temp2" name='11'type="text" class="validate" value="{{data[10]}}">
+  </div>
+  <div class="input-field col s4">
+
+    <label for="Oxy2"><b>texture_se </b></label>
+      <br>
+    <input id="Oxy2"  name="12" type="text" class="validate" value="{{data[11]}}">
+
+  </div>
+
+  <div class="input-field col s4">
+      <label for="hum2"><b>perimeter_se</b></label>
+      <br>
+    <input id="hum2" name="13" type="text" class="validate" value="{{data[12]}}">
+
+  </div>
+
+
+
+
+
+  <div class="input-field col s4">
+      <label for="temp3"><b>area_se</b></label>
+      <br>
+    <input   id="temp3" name='14'type="text" class="validate" value="{{data[13]}}">
+  </div>
+  <div class="input-field col s4">
+
+    <label for="Oxy3"><b>smoothness_se </b></label>
+      <br>
+    <input id="Oxy3"  name="15" type="text" class="validate" value="{{data[14]}}">
+
+  </div>
+
+
+
+
+<div class="input-field col s4">
+      <label for="Temp"><b>compactness_se</b></label>
+      <br>
+    <input   id="Temp" name='16'type="text" class="validate" value="{{data[15]}}">
+  </div>
+  <div class="input-field col s4">
+
+    <label for="Oxy"><b>concavity_se </b></label>
+      <br>
+    <input id="Oxy"  name="17" type="text" class="validate" value="{{data[16]}}">
+
+  </div>
+
+  <div class="input-field col s4">
+      <label for="hum"><b>concavepoints_se</b></label>
+      <br>
+    <input id="hum" name="18" type="text" class="validate" value="{{data[17]}}">
+
+  </div>
+
+
+
+
+  <div class="input-field col s4">
+      <label for="temp2"><b>symmetry_se</b></label>
+      <br>
+    <input   id="temp2" name='19'type="text" class="validate" value="{{data[18]}}"> 
+  </div>
+  <div class="input-field col s4">
+
+    <label for="Oxy2"><b>fractal_dimension_se </b></label>
+      <br>
+    <input id="Oxy2"  name="20" type="text" class="validate" value="{{data[19]}}">
+
+  </div>
+
+  <div class="input-field col s4">
+      <label for="hum2"><b>radius_worst</b></label>
+      <br>
+    <input id="hum2" name="21" type="text" class="validate" value="{{data[20]}}">
+
+  </div>
+
+
+
+
+
+  <div class="input-field col s4">
+      <label for="temp3"><b>texture_worst</b></label>
+      <br>
+    <input   id="temp3" name='22'type="text" class="validate" value="{{data[21]}}">
+  </div>
+  <div class="input-field col s4">
+
+    <label for="Oxy3"><b>perimeter_worst </b></label>
+      <br>
+    <input id="Oxy3"  name="23" type="text" class="validate" value="{{data[22]}}">
+
+  </div>
+
+
+
+
+
+
+<div class="input-field col s4">
+      <label for="Temp"><b>area_worst</b></label>
+      <br>
+    <input   id="Temp" name='24'type="text" class="validate" value="{{data[23]}}">
+  </div>
+  <div class="input-field col s4">
+
+    <label for="Oxy"><b>smoothness_worst </b></label>
+      <br>
+    <input id="Oxy"  name="25" type="text" class="validate" value="{{data[24]}}">
+
+  </div>
+
+  <div class="input-field col s4">
+      <label for="hum"><b>compactness_worst</b></label>
+      <br>
+    <input id="hum" name="26" type="text" class="validate" value="{{data[25]}}">
+
+  </div>
+
+
+
+
+  <div class="input-field col s4">
+      <label for="temp2"><b>concavity_worst</b></label>
+      <br>
+    <input   id="temp2" name='27'type="text" class="validate" value="{{data[26]}}">
+  </div>
+  <div class="input-field col s4">
+
+    <label for="Oxy2"><b>concavepoints_worst </b></label>
+      <br>
+    <input id="Oxy2"  name="28" type="text" class="validate" value="{{data[27]}}">
+
+  </div>
+
+  <div class="input-field col s4">
+      <label for="hum2"><b>symmetry_worst</b></label>
+      <br>
+    <input id="hum2" name="29" type="text" class="validate" value="{{data[28]}}">
+
+  </div>
+
+
+
+
+
+  <div class="input-field col s4">
+      <label for="temp3"><b>fractal_dimension_worst</b></label>
+      <br>
+    <input   id="temp3" name='30'type="text" class="validate" value="{{data[29]}}">
+  </div>
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endfor %}
+
+{% endif %}
+
+
+
+
+      </div>
+
+      <div class="row center">
+
+          <button type="submit" class="btn-large waves-effect waves-light orange">Predict Probability</button>
+      </div>
+
+      <div class="row right">
+      
+    </div>
+    </form>
+      </div>
+
+      <br><h4 align="center"><b>{{pred}}</b></h4>
+        <br>
+
+    </div>
+  </div>
+
+ 
+
+      <!--   Icon Section   -->
+      
+    <div class="footer-copyright">
+      
+    </div>
+  
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src=".js/materialize.js"></script>
+  <script src="js/init.js"></script>
+
+  </body>
+</html>
+
+
