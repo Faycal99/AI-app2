@@ -1,10 +1,6 @@
-# AI-app2
 
-# The running application is : Application.py
 
-# The model that I have created for the diagnosis is : UPLUSbreastCancer.py
-
-## Breast Cancer Classification (Benign vs. Malignant)
+# Breast Cancer Classification (Benign vs. Malignant)
 
 This project uses the Breast Cancer Wisconsin (Diagnostic) dataset to predict whether a breast tumor is benign (non-cancerous) or malignant (cancerous).
 
@@ -29,4 +25,9 @@ M = Malignant (cancerous)
 B = Benign (non-cancerous)
 
 The application trains a machine learning model on these features to automatically classify tumors, providing a step toward AI-assisted medical diagnosis.
+
+
+# The running application is : Application.py
+
+# The model that I have created for the diagnosis is : UPLUSbreastCancer.py
 
