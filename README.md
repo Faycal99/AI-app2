@@ -2,5 +2,5 @@
 
 # The running application is : Application.py
 
-# The model that i have created for the diagnosis is : UPLUSbreastCancer.py
+# The model that I have created for the diagnosis is : UPLUSbreastCancer.py
 
