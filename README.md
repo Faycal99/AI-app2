@@ -31,3 +31,5 @@ The application trains a machine learning model on these features to automatical
 
 # The model that I have created for the diagnosis is : UPLUSbreastCancer.py
 
+# The data used is for wisconson : data.csv
+
